@@ -1,0 +1,10 @@
+
+<h1 class="text-center">List of all attender <a href="/attenders/new" class="btn btn-primary">Add Attender</a></h1>
+
+<div class="col-md-4 col-md-offset-4">
+  <ol>
+  <% @attenders.each do |attender| %>
+    <li><a href="/attenders/<%=attender.id%>"><%= attender.display %></a></li>
+  <% end %>
+  </ol>
+</div>

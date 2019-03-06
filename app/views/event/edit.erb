@@ -1,0 +1,8 @@
+<h3>Edit Event</h3>
+
+<form action="/event/edit" method="POST">
+  <p>Name: <input type="text" name="name" value="<%=@event.name%>"></p>
+  <p>Location: <input type="text" name="location" value="<%=@event.location%>"></p>
+  <p>Date: <input type="date" name="date" value="<%=@event.date.strftime('%Y-%m-%d')%>"></p>
+  <input type="submit" class="btn btn-success" value="Edit Event">
+</form>

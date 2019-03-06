@@ -1,0 +1,8 @@
+<h3>Edit an attender</h3>
+
+<form action="/attenders/<%=@attender.id%>" method="POST">
+  <p>Name: <input type="text" name="name" value="<%=@attender.name%>"></p>
+  <p>Role: <input type="text" name="role" value="<%=@attender.role%>"></p>
+  <p>Verify if attender has RSVPd: <input type="checkbox" name="rsvp" value="true" <%='checked' if @attender.rsvp %>></p>
+  <input type="submit" class="btn btn-success" value="Edit Attender">
+</form>

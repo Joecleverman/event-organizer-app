@@ -1,0 +1,10 @@
+<h1><%= @attender.name %></h1>
+<p>Role: <%= @attender.role %></p>
+<p>RSVP?: <%= @attender.rsvp ? "Yes" : "No" %></p>
+
+<a href="/attenders/<%=@attender.id%>/edit" class="btn btn-primary">Edit Attender</a>
+<br /><br />
+<form action="/attenders/<%=@attender.id%>/delete" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" class="btn btn-danger" value="Delete Attender">
+</form>

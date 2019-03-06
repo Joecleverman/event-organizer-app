@@ -1,0 +1,10 @@
+<h1 class="text-center">List of all contractor <a href="/contractors/new" class="btn btn-primary">Add Contractor</a></h1>
+
+<div class="col-md-4 col-md-offset-4">
+<ol>
+<% @contractors.each do |contractor| %>
+  <li><a href="/contractors/<%=contractor.id%>"><%= contractor.display %></a></li>
+<% end %>
+
+</ol>
+</div>
