@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
-  <title></title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+<title></title>
 </head>
+<link rel="stylesheet" href='/stylesheets/main.css'>
+<center>
+<h1>The Event Organizer</h1>
+
+<br />
+</center>
+
 <body>
-  <ul class="nav nav-tabs">
-    <li><a href="/">Home</a></li>
-    <% if logged_in? %>
-      <li><a href="/event">Event</a></li>
-      <% if current_user.event %>
-        <li><a href="/contractors">Contractors</a></li>
-        <li><a href="/attenders">Attenders</a></li>
-      <% end %>
-      <li><a href="/logout">Logout</a></li>
-    <% else %>
-      <li><a href="/signup">Sign Up</a></li>  
-      <li><a href="/login">Log In</a></li>
-    <% end %>
-  </ul>
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+<div class="navbar-header">
+<a class="navbar-brand" href="#">EO</a>
+</div>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+<% if logged_in? %>
+<li><a href="/event">Event</a></li>
+<% if current_user.event %>
+<li><a href="/contractors">Contractors</a></li>
+<li><a href="/attenders">Attenders</a></li>
+<% end %>
+<li><a href="/logout">Logout</a></li>
+<% else %>
+<li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+<li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+<% end %>
+</ul>
+</div>
+</nav>
+<div class="jumborton big-banner" style="height:500px; padding-top: 150px;">
 
-  <% unless session[:message].nil? %>
-    <center>
-      <h3><%= session[:message] %></h3>
-    </center>
-    <% session[:message].clear %>
-  <% end %>
-  
-  <div class="col-md-1"></div>
-  <div class="col-md-10">
-    <%= yield %>
-  </div>
-  <div class="col-md-1"></div>
+<% unless session[:message].nil? %>
+<center>
+<h3><%= session[:message] %></h3>
+</center>
+<% session[:message].clear %>
+<% end %>
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<%= yield %>
+</div>
 
+<div class="col-md-1"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>

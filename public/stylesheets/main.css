@@ -1,5 +1,14 @@
-body {
-    background-image: url("https://i.imgur.com/n03Ckko.jpg");
-    background-repeat: no-repeat;
-    background-position: right top;
-  }
+.big-banner{
+    background-image: url('../images/bacground1.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+h6 {
+  line-height: 4.0;
+}
+
+.container {
+  padding: 80px 120px;
+}
