@@ -1,8 +1,20 @@
-<h3>Edit Event</h3>
+<br />
+<br />
+<div class="text-center">
+    <h3 class="white-text">
+    <i class="fas fa-user white-text"></i><font color="dodgerblue"> Edit Event:</font></h3>
+    <hr class="hr-light">
+</div>
+<center>
 
 <form action="/event/edit" method="POST">
   <p>Name: <input type="text" name="name" value="<%=@event.name%>"></p>
   <p>Location: <input type="text" name="location" value="<%=@event.location%>"></p>
   <p>Date: <input type="date" name="date" value="<%=@event.date.strftime('%Y-%m-%d')%>"></p>
-  <input type="submit" class="btn btn-success" value="Edit Event">
+  <input type="submit" class="btn btn-warning" value="Edit Event">
+
+  <hr class="hr-light">
 </form>
+</center>
+</div>
+</body>

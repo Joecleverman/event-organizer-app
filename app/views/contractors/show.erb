@@ -1,11 +1,21 @@
+<div class="text-center">
+    <h3 class="white-text">
+    <hr class="hr-light">
+</div>
+<center>
+
 <h1><%= @contractor.name %></h1>
 
 <p>Title: <%= @contractor.title %></p>
 <p>Cost: <%= @contractor.cost %></p>
 
-<a href="/contractors/<%=@contractor.id%>/edit" class="btn btn-primary">Edit Contractor</a>
+<a href="/contractors/<%=@contractor.id%>/edit" class="btn btn-warning">Edit Contractor</a>
 <br /><br />
 <form action="/contractors/<%=@contractor.id%>/delete" method="post">
   <input id="hidden" type="hidden" name="_method" value="delete">
   <input type="submit" class="btn btn-danger" value="Delete Contractor">
 </form>
+
+</center>
+</div>
+</body>

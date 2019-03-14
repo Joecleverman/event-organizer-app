@@ -2,7 +2,7 @@
 <p>Role: <%= @attender.role %></p>
 <p>RSVP?: <%= @attender.rsvp ? "Yes" : "No" %></p>
 
-<a href="/attenders/<%=@attender.id%>/edit" class="btn btn-primary">Edit Attender</a>
+<a href="/attenders/<%=@attender.id%>/edit" class="btn btn-warning">Edit Attender</a>
 <br /><br />
 <form action="/attenders/<%=@attender.id%>/delete" method="post">
   <input id="hidden" type="hidden" name="_method" value="delete">
